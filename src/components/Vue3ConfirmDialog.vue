@@ -11,11 +11,12 @@
           <span class="vc-text-grid">
             <h4 v-if="dialog.title" class="vc-title" v-html="dialog.title"></h4>
             <p v-if="dialog.message" class="vc-text" v-html="dialog.message"></p>
+            <p v-if="dialog.extraMessage" class="vc-text" v-html="dialog.extraMessage"></p>
             <span v-if="dialog.auth">
               <input
                 v-focus
                 v-model="password"
-                @keyup.13="e => handleClickButton(e, true)"
+                @keyup.enter="e => handleClickButton(e, true)"
                 class="vc-input"
                 type="password"
                 name="vc-password"
@@ -73,6 +74,7 @@ const Vue3DialogConfirm = {
         auth: false,
         title: "",
         message: "",
+        extraMessage: "",
         button: {}
       },
       params: {}
@@ -85,6 +87,7 @@ const Vue3DialogConfirm = {
         auth: false,
         title: "",
         message: "",
+        extraMessage: "",
         button: {},
         callback: () => {}
       }
