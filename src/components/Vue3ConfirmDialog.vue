@@ -27,6 +27,7 @@
                   {{ option.text }}
                 </option>
               </select>
+            </span>
 
             <span v-if="dialog.auth">
               <input
