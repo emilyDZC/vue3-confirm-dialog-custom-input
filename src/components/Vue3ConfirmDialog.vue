@@ -29,6 +29,9 @@
               </select>
             </span>
 
+            <!-- make a slot here for anything to go in -->
+            <slot></slot>
+
             <span v-if="dialog.auth">
               <input
                 v-focus

@@ -1,7 +1,7 @@
 {
   "name": "vue3-confirm-dialog-custom-input",
-  "version": "0.1.3",
-  "description": "Version of vue3-confirm-dialog but allowing custom input into the dialogue",
+  "version": "0.1.4",
+  "description": "Version of vue3-confirm-dialog allowing custom input into the dialogue",
   "type": "module",
   "main": "dist/vue3-confirm-dialog.js",
   "exports": {
