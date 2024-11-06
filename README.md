@@ -1,4 +1,4 @@
-# vue3-confirm-dialog
+# vue3-confirm-dialog-custom-input
 
 A version of Simple Confirm Dialog verification plugin with Vue 3, allowing a slot for custom components to be inserted into the dialog.
 
