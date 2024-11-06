@@ -12,6 +12,22 @@
             <h4 v-if="dialog.title" class="vc-title" v-html="dialog.title"></h4>
             <p v-if="dialog.message" class="vc-text" v-html="dialog.message"></p>
             <p v-if="dialog.extraMessage" class="vc-text" v-html="dialog.extraMessage"></p>
+            <!-- make a dropdown select component -->
+            <span v-if="dialog.dropdown">
+              <select
+                v-focus
+                v-model="dropdownOption"
+                @keyup.enter="e => handleSelect(e, true)"
+                class="vc-input"
+                type="select"
+                name="vc-select"
+                placeholder="Select option"
+              >
+                <option v-for="option in dialog.dropdown.options" :value="option.value" :key="option">
+                  {{ option.text }}
+                </option>
+              </select>
+
             <span v-if="dialog.auth">
               <input
                 v-focus
@@ -75,7 +91,8 @@ const Vue3DialogConfirm = {
         title: "",
         message: "",
         extraMessage: "",
-        button: {}
+        button: {},
+        dropdown: { options: []}
       },
       params: {}
     }
@@ -89,6 +106,7 @@ const Vue3DialogConfirm = {
         message: "",
         extraMessage: "",
         button: {},
+        dropdown: { options: []},
         callback: () => {}
       }
     },
