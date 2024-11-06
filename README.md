@@ -1,8 +1,8 @@
 # vue3-confirm-dialog
 
-Simple Confirm Dialog verification plugin with Vue 3.
+A version of Simple Confirm Dialog verification plugin with Vue 3, allowing a slot for custom components to be inserted into the dialog.
 
-Demo: https://github.com/rowathy/vue3-confirm-dialog
+Demo of original dialog: https://github.com/rowathy/vue3-confirm-dialog
 
 ![confirm-dialog](https://raw.githubusercontent.com/rowathy/vue3-confirm-dialog/main/src/assets/confirm-dialog.png)
 
@@ -10,7 +10,7 @@ Demo: https://github.com/rowathy/vue3-confirm-dialog
 ## Install
 
 ```bash
-npm install --save vue3-confirm-dialog
+npm install --save vue3-confirm-dialog-custom-input
 ```
 
 ## Quick Start Usage
@@ -19,8 +19,8 @@ In main.js or plugin (for Nuxt.js):
 
 ```js
 import { createApp } from 'vue';
-import Vue3ConfirmDialog from 'vue3-confirm-dialog';
-import 'vue3-confirm-dialog/style;
+import Vue3ConfirmDialog from 'vue3-confirm-dialog-custom-input';
+import 'vue3-confirm-dialog-custom-input/style;
 
 const app = createApp();
 
@@ -42,6 +42,20 @@ In App.vue (or in the template file for Nuxt.js (layout/default.vue)):
     name: 'app'
   }
 </script>
+```
+To use the slot:
+```html
+<template>
+  <div id="app">
+    <vue3-confirm-dialog>
+      <!-- Put anything here within the dialog tags. Example below for a dropdown within the dialog: -->
+       <select class="vc-text" v-model="selectedOption">
+          <option v-for="option in dropdownOptions" :value="option.value" :key="option">{{ option.text }}</option>
+      </select>
+    </vue3-confirm-dialog>
+    <!-- your code -->
+  </div>
+</template>
 ```
 
 In any of functions :
