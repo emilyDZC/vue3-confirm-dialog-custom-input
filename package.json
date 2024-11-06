@@ -1,6 +1,6 @@
 {
   "name": "vue3-confirm-dialog-custom-input",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Version of vue3-confirm-dialog allowing custom input into the dialogue",
   "type": "module",
   "main": "dist/vue3-confirm-dialog.js",
@@ -33,5 +33,5 @@
     "popup"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/rowathy/vue3-confirm-dialog#readme"
+  "homepage": "https://github.com/emilyDZC/vue3-confirm-dialog-custom-input#readme"
 }
